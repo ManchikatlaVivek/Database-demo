@@ -40,9 +40,8 @@ public class PersonJdbcDAO {
 	}
 
 	public Person findById(int id) {
-		return jdbctemplate.queryForObject("select * from person where id=?",
-		 new Object[] { id },
-				new BeanPropertyRowMapper<Person>(Person.class));
+		return jdbctemplate.queryForObject(" select * from person where id=? ", new Object[] { id },
+				new PersonRowMapper());
 	}
 
 	public int deleteById(int id) {
