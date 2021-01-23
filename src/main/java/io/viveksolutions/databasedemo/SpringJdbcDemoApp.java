@@ -7,13 +7,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import io.viveksolutions.databasedemo.entity.Person;
 import io.viveksolutions.databasedemo.jdbc.PersonJdbcDAO;
 
-@SpringBootApplication
-public class DatabaseDemoApplication implements CommandLineRunner {
+//@SpringBootApplication
+public class SpringJdbcDemoApp implements CommandLineRunner {
 
 	@Autowired
 	PersonJdbcDAO dao;
@@ -21,7 +20,7 @@ public class DatabaseDemoApplication implements CommandLineRunner {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	public static void main(String[] args) {
-		SpringApplication.run(DatabaseDemoApplication.class, args);
+		SpringApplication.run(SpringJdbcDemoApp.class, args);
 	}
 
 	@Override
